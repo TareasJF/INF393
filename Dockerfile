@@ -7,6 +7,7 @@ RUN pip install \
         pandas  \
         sklearn \
         scipy   \
-        matplotlib
+        matplotlib \
+        ipywidgets && jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 RUN echo "c.Spawner.notebook_dir = '/notebooks'" >> /srv/jupyterhub/jupyterhub_config.py
