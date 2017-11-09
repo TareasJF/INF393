@@ -8,6 +8,8 @@ RUN pip install \
         sklearn \
         scipy   \
         matplotlib \
-        ipywidgets && jupyter nbextension enable --py --sys-prefix widgetsnbextension
+        ipywidgets \
+        nltk \
+        && jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 RUN echo "c.Spawner.notebook_dir = '/notebooks'" >> /srv/jupyterhub/jupyterhub_config.py
