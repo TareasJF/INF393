@@ -10,6 +10,8 @@ RUN pip install \
         matplotlib \
         ipywidgets \
         nltk \
+        keras \
+        tensorflow \
         && jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 RUN echo "c.Spawner.notebook_dir = '/notebooks'" >> /srv/jupyterhub/jupyterhub_config.py
